@@ -60,7 +60,13 @@ class _StartingGameBodyState extends State<StartingGameBody> {
       if (_showOverlay)
         ResultOfGame(
           child: Column(
-            children: [ResultLisView(), CustomNavBtn(text: AppStrings.next)],
+            children: [
+              ResultLisView(),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 44.57),
+                child: CustomNavBtn(text: AppStrings.next),
+              )
+            ],
           ),
         )
     ]);
@@ -74,17 +80,19 @@ class ResultLisView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      itemBuilder: (BuildContext context, int index) {
-        return PlayerOrderContainer(
-          width: index == 0 ? 308.55 : 303.69,
-          height: index == 0 ? 64.67 : 59.99,
-        );
-      },
-      separatorBuilder: (BuildContext context, int index) {
-        return SizedBox(height: 10.31);
-      },
-      itemCount: 3,
+    return Expanded(
+      child: ListView.separated(
+        itemBuilder: (BuildContext context, int index) {
+          return PlayerOrderContainer(
+            width: index == 0 ? 308.55 : 303.69,
+            height: index == 0 ? 64.67 : 59.99,
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return SizedBox(height: 10.31);
+        },
+        itemCount: 3,
+      ),
     );
   }
 }
