@@ -56,10 +56,11 @@ class _StartingGameBodyState extends State<StartingGameBody> {
           ],
         ),
       ),
-      // if (_showOverlay)
-      ResultOfGame(
-        child: ResultLisView(),
-      )
+      if (_showOverlay)
+        ResultOfGame(
+          child: ResultLisView(),
+          
+        )
     ]);
   }
 }
