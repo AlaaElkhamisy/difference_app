@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:playing_app/core/functions/navigation.dart';
 import 'package:playing_app/core/routes/app_router.dart';
 import 'package:playing_app/core/utilis/assets.dart';
 
@@ -72,7 +72,7 @@ class _DelayedOverlayImageState extends State<DelayedOverlayImage>
                   _removeInitialOverlay = true;
                   _showNewOverlay = true;
                   Future.delayed(Duration(seconds: 6), () {
-                    GoRouter.of(context).push(AppRouter.home);
+                    customReplacementNavigation(context, AppRouter.home);
                   });
                 });
               }

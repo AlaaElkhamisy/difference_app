@@ -26,6 +26,7 @@ class AppStrings {
   static String item4 = 'دقيقة\t4';
   static String time = 'الوقت';
   static String winner = 'الفائز';
+  static String next = 'التالي';
   static String wrongCount = ': عدد الاخطاء';
   static String gainedCoins = ': المكسب';
   static String returnInternetConnection = 'جار الاتصال بالإنترنت مرةأخرى';

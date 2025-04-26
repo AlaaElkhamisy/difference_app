@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playing_app/core/customs/custom_nav_btn.dart';
 import 'package:playing_app/core/customs/custom_text_widget.dart';
 import 'package:playing_app/core/utilis/app_Strings.dart';
 import 'package:playing_app/core/utilis/app_colors.dart';
@@ -58,8 +59,9 @@ class _StartingGameBodyState extends State<StartingGameBody> {
       ),
       if (_showOverlay)
         ResultOfGame(
-          child: ResultLisView(),
-          
+          child: Column(
+            children: [ResultLisView(), CustomNavBtn(text: AppStrings.next)],
+          ),
         )
     ]);
   }
